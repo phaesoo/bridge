@@ -3,7 +3,7 @@
 HOST=0.0.0.0
 PORT=8000
 
-export FLASK_APP=bridge
+export FLASK_APP=relay
 export FLASK_ENV=debug
 export FLASK_DEBUG=1
 rm -rf *.egg-info

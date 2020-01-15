@@ -1,10 +1,10 @@
-from bridge.apps.api.restplus import api
+from relay.apps.api.restplus import api
 
 from flask import Flask, Blueprint
 
 
 #from app.db.database import init_db
-from bridge.apps.common.log import init_logger
+from relay.apps.common.log import init_logger
 
 
 def create_app(debug=True):

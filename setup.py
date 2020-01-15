@@ -2,10 +2,10 @@ from setuptools import setup
 
 
 setup(
-    name='bridge',
+    name='relay',
     version='1.0.0',
     author='hspark',
-    packages=['bridge'],
+    packages=['relay'],
     include_package_data=True,
     install_requires=[
         'flask',

@@ -1,12 +1,12 @@
 import logging
 from flask_restplus import Api
 from werkzeug import exceptions
-from bridge.apps.common import status
-from bridge.apps.common import response as resp
+from relay.apps.common import status
+from relay.apps.common import response as resp
 
 
 logger = logging.getLogger(__name__)
-api = Api(version="1.0.0", title="Bridge REST API for client")
+api = Api(version="1.0.0", title="relay REST API for client")
 
 
 @api.errorhandler

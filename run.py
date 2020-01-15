@@ -1,8 +1,8 @@
 #!/bin/env python
 from argparse import ArgumentParser
 from flask_socketio import SocketIO, emit
-from bridge import create_app
-from bridge.apps.socketio.namespaces.feeder import FeederNamespace
+from relay import create_app
+from relay.apps.socketio.namespaces.feeder import FeederNamespace
 
 
 def pass_options():

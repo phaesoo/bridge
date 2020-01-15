@@ -1,6 +1,5 @@
 aniso8601==8.0.0
 attrs==19.3.0
--e git+git@github.com:phaesoo/bridge.git@b9f39353c6df15dcba8a73b55fbeb10b318eafcb#egg=bridge
 Click==7.0
 Flask==1.1.1
 flask-restplus==0.13.0
