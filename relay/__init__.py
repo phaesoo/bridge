@@ -2,9 +2,8 @@ from relay.apps.api.restplus import api
 
 from flask import Flask, Blueprint
 
-
-#from app.db.database import init_db
-from relay.apps.common.log import init_logger
+from relay.db.redis import init_redis
+from relay.common.log import init_logger
 
 
 def create_app(debug=True):
@@ -17,9 +16,9 @@ def create_app(debug=True):
     else:
         raise NotImplementedError
 
-    ## to avoid Runtime error
-    #with app.app_context():
-    #    init_db()
+    # to avoid Runtime error
+    with app.app_context():
+        init_redis(0)
 
     # rest api
     blueprint = Blueprint("api", __name__, url_prefix="/api")
