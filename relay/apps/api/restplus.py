@@ -1,8 +1,8 @@
 import logging
 from flask_restplus import Api
 from werkzeug import exceptions
-from relay.apps.common import status
-from relay.apps.common import response as resp
+from relay.common import status
+from relay.common import response as resp
 
 
 logger = logging.getLogger(__name__)

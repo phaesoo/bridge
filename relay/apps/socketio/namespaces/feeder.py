@@ -21,11 +21,11 @@ client.connected
 
 class FeederNamespace(Namespace):
     def on_connect(self):
-        print ("on connect")
+        print("on connect")
 
     def on_disconnect(self):
-        print ("on disconnect")
+        print("on disconnect")
 
     def on_message(self, data):
-        print ("data: {}".format(data))
+        print("message data: {}".format(data))
         # do something

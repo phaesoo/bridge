@@ -12,10 +12,11 @@ def create_app(debug=True):
     app.config['BUNDLE_ERRORS'] = True
 
     if debug:
-        app.config.from_pyfile("./configs/dev.py")
+        app.config.from_pyfile("conf/dev.py")
     else:
         raise NotImplementedError
-
+    
+    print (app.config)
     # to avoid Runtime error
     with app.app_context():
         init_redis(0)
