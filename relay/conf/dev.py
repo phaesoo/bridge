@@ -1,9 +1,10 @@
 from base import *
 
+
 SECRET_KEY="secret!"
 
 
 REDIS = {
-    "HOST": "host_temp",
+    "HOST": "127.0.0.1",
     "PORT": 6379,
 }
