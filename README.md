@@ -2,6 +2,11 @@
 Backend project for various kinds of inter-server communication
 
 
+## Prerequisites
+
+- Redis: message queue for socketio, database
+
+
 ## Debugging/Testing
 
 Run debug server
@@ -20,7 +25,7 @@ $ bash relay/run_test.sh
 ## Tech stacks
 
 Framework: Flask
-Communication: socket.io, HTTP(REST API)
+Communication: socketio, HTTP(REST API)
 Database: Redis
 
 

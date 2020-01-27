@@ -6,19 +6,20 @@ __clients = dict()
 
 
 def init_redis(db):
+    print (__clients)
     if db in __clients:
         raise ValueError("Duplicated redis db: {}".format(db))
 
     config_dict = get_config("REDIS")
-    conn = redis.StrictRedis(
+    r = redis.StrictRedis(
         host=config_dict["HOST"],
         port=config_dict["PORT"],
         db=db
     )
     # for checking connection and db index
-    conn.ping()
+    r.ping()
 
-    __clients[db] = conn
+    __clients[db] = r
 
 
 def get_redis(db):

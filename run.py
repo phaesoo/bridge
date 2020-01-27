@@ -1,8 +1,6 @@
 #!/bin/env python
 from argparse import ArgumentParser
-from flask_socketio import SocketIO, emit
-from relay import create_app
-from relay.apps.socketio.namespaces.feeder import FeederNamespace
+from relay import create_app, create_sio
 
 
 def pass_options():
@@ -16,8 +14,9 @@ def pass_options():
 if __name__ == '__main__':
     args = pass_options()
 
+    # flask app
     app = create_app(debug=args.debug)
-    # socket io
-    socketio = SocketIO(app)
-    socketio.on_namespace(FeederNamespace("/feeder"))
-    socketio.run(app, host=args.host, port=args.port)
+    # socketio
+    sio = create_sio()
+    sio.init_app(app)
+    sio.run(app, host=args.host, port=args.port)
